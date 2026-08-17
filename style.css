@@ -1,0 +1,1267 @@
+/* =========================================================
+   GLOBAL VARIABLES
+   ========================================================= */
+
+:root {
+  --cream: #f8f3eb;
+  --paper: #fffdf9;
+  --ink: #292822;
+  --muted: #766f64;
+  --gold: #ad8350;
+  --line: #ded4c5;
+  --dark: #20211d;
+}
+
+
+/* =========================================================
+   GLOBAL / RESET
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================================================
+   MUSIC BUTTON
+   ========================================================= */
+
+.music-pill {
+  position: fixed;
+  right: 22px;
+  top: 18px;
+  z-index: 20;
+}
+
+.music-pill button {
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: rgba(20, 20, 17, 0.42);
+  backdrop-filter: blur(10px);
+  color: white;
+  border-radius: 99px;
+  padding: 11px 17px;
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+
+.hero {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background:
+    /* linear-gradient(90deg,
+      rgba(20, 20, 16, 0.54),
+      rgba(20, 20, 16, 0.20)), */
+    linear-gradient(90deg,
+      rgba(20, 20, 16, 0.836),
+      rgba(20, 20, 16, 0.389)),
+    /* url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2200&q=90") center / cover fixed; */
+    url("images/hero-default.jpg") center / cover fixed;
+
+  color: #fff;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 25px 5vw;
+}
+
+.brand {
+  font-family: "Great Vibes", cursive;
+  font-size: 28px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+
+  font-size: 14px;
+}
+
+.nav-links a {
+  opacity: 0.9;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.hero-content {
+  text-align: center;
+  padding: 70px 20px 80px;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+
+  font-size: 11px;
+  color: var(--gold);
+}
+
+.hero .eyebrow {
+  color: #eee;
+}
+
+.hero h1 {
+  margin: 0;
+
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(62px, 10vw, 125px);
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.hero h1 span {
+  font-size: 0.55em;
+}
+
+.subtitle {
+  font-family: "Cormorant Garamond", serif;
+
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+
+  font-size: 18px;
+}
+
+.date {
+  margin-top: 25px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  letter-spacing: 0.18em;
+}
+
+.scroll {
+  display: block;
+
+  margin-top: 50px;
+
+  font-size: 30px;
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+   ========================================================= */
+
+section {
+  padding: 100px 7vw;
+}
+
+.intro {
+  text-align: center;
+  background: var(--cream);
+}
+
+h2 {
+  margin: 0 0 15px;
+
+  font-family: "Great Vibes", cursive;
+  font-size: 58px;
+  font-weight: 400;
+}
+
+p {
+  line-height: 1.75;
+}
+
+.lead {
+  max-width: 650px;
+
+  margin: 0 auto 45px;
+
+  color: var(--muted);
+}
+
+
+/* =========================================================
+   EVENT DETAILS
+   ========================================================= */
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  max-width: 900px;
+  margin: auto;
+}
+
+.details-grid>div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  padding: 20px;
+
+  border-right: 1px solid var(--line);
+}
+
+.details-grid>div:last-child {
+  border: 0;
+}
+
+.icon {
+  font-size: 30px;
+  color: var(--gold);
+}
+
+small {
+  color: var(--muted);
+}
+
+
+/* =========================================================
+   STORY SECTION
+   ========================================================= */
+
+.story {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 70px;
+  align-items: center;
+
+  max-width: 1300px;
+  margin: auto;
+}
+
+.story-copy p {
+  color: var(--muted);
+}
+
+
+/* =========================================================
+   STORY PHOTO GRID
+   ========================================================= */
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.photo-grid img {
+  width: 100%;
+  height: 370px;
+
+  object-fit: cover;
+
+  border-radius: 3px;
+}
+
+
+/* =========================================================
+   LOCATION SECTION
+   ========================================================= */
+
+.location {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 60px;
+  align-items: center;
+
+  background: var(--cream);
+}
+
+.location-copy {
+  max-width: 400px;
+}
+
+
+/* =========================================================
+   MAP
+   ========================================================= */
+
+.map-card {
+  height: 450px;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  box-shadow: 0 15px 45px rgba(50, 40, 25, 0.12);
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.button {
+  display: inline-block;
+
+  margin-top: 18px;
+  padding: 13px 22px;
+
+  border: 1px solid var(--gold);
+  border-radius: 99px;
+
+  font-size: 13px;
+}
+
+.button.gold {
+  background: var(--gold);
+  color: white;
+}
+
+.button.outline {
+  background: transparent;
+}
+
+
+/* =========================================================
+   GALLERY
+   ========================================================= */
+
+/* .gallery {
+  max-width: 1300px;
+  margin: auto;
+
+  text-align: center;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 14px;
+
+  margin-top: 40px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 330px;
+
+  object-fit: cover;
+
+  border-radius: 4px;
+}
+
+.gallery-grid img:first-child {
+  height: 674px;
+
+  grid-row: span 2;
+}
+ */
+/* =========================================================
+   GALLERY
+   ========================================================= */
+/* =========================================================
+   GALLERY
+   ========================================================= */
+
+.gallery {
+  max-width: 1300px;
+  margin: auto;
+
+  text-align: center;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+     GALLERY HEADING
+     ========================================================= */
+
+.gallery-heading {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.gallery-heading h2 {
+  margin-bottom: 8px;
+}
+
+.gallery-line {
+  position: relative;
+
+  display: block;
+
+  width: 90px;
+  height: 1px;
+
+  margin: 0 auto 20px;
+
+  background: var(--gold);
+}
+
+.gallery-line::before,
+.gallery-line::after {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+
+  width: 5px;
+  height: 5px;
+
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+
+  background: var(--paper);
+
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.gallery-line::before {
+  left: -8px;
+}
+
+.gallery-line::after {
+  right: -8px;
+}
+
+.gallery-intro {
+  max-width: 500px;
+
+  margin: 0 auto;
+
+  color: var(--muted);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 18px;
+}
+
+
+/* =========================================================
+     GALLERY GRID
+     ========================================================= */
+
+.gallery-grid {
+  display: grid;
+
+  grid-template-columns: 1.5fr 1fr 1fr;
+
+  gap: 14px;
+
+  margin-top: 45px;
+}
+
+
+/* =========================================================
+     GALLERY ITEMS
+     ========================================================= */
+
+.gallery-item {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+  height: 330px;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  border: 0;
+  border-radius: 4px;
+
+  background: none;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  isolation: isolate;
+}
+
+
+/* Large first image */
+
+.gallery-item-large {
+  height: 674px;
+
+  grid-row: span 2;
+}
+
+
+/* =========================================================
+     GALLERY IMAGES
+     ========================================================= */
+
+.gallery-item img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.6s ease;
+}
+
+
+/* =========================================================
+     GALLERY OVERLAY
+     ========================================================= */
+
+.gallery-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  padding: 20px;
+
+  background:
+    linear-gradient(to top,
+      rgba(20, 20, 17, 0.55),
+      rgba(20, 20, 17, 0) 55%);
+
+  opacity: 0;
+
+  transition: opacity 0.45s ease;
+
+  pointer-events: none;
+}
+
+
+/* Photo number */
+
+.gallery-number {
+  color: white;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 15px;
+
+  letter-spacing: 0.15em;
+}
+
+
+/* Plus icon */
+
+.gallery-open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 50%;
+
+  color: white;
+
+  font-size: 23px;
+  font-weight: 300;
+
+  line-height: 1;
+
+  transform: rotate(0deg) scale(0.8);
+
+  transition:
+    transform 0.5s ease,
+    background 0.3s ease;
+}
+
+
+/* =========================================================
+     HOVER EFFECT
+     ========================================================= */
+
+.gallery-item:hover img {
+  transform: scale(1.045);
+
+  filter: brightness(0.88);
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-item:hover .gallery-open {
+  transform: rotate(90deg) scale(1);
+
+  background: rgba(173, 131, 80, 0.85);
+}
+
+
+/* =========================================================
+     KEYBOARD FOCUS
+     ========================================================= */
+
+.gallery-item:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 5px;
+}
+
+
+/* =========================================================
+     GALLERY HINT
+     ========================================================= */
+
+.gallery-hint {
+  margin: 25px 0 0;
+
+  color: var(--muted);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 15px;
+
+  letter-spacing: 0.08em;
+
+  opacity: 0.8;
+}
+
+
+/* =========================================================
+     GALLERY SCROLL REVEAL
+     ========================================================= */
+
+.gallery-item {
+  opacity: 0;
+
+  transform: translateY(30px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.gallery-item:nth-child(1) {
+  transition-delay: 0.05s;
+}
+
+.gallery-item:nth-child(2) {
+  transition-delay: 0.15s;
+}
+
+.gallery-item:nth-child(3) {
+  transition-delay: 0.25s;
+}
+
+.gallery-item:nth-child(4) {
+  transition-delay: 0.35s;
+}
+
+.gallery-item.is-visible {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+     LIGHTBOX
+     ========================================================= */
+
+.lightbox {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px;
+
+  background: rgba(20, 20, 17, 0.94);
+
+  backdrop-filter: blur(12px);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease;
+}
+
+.lightbox.active {
+  opacity: 1;
+
+  visibility: visible;
+}
+
+
+/* =========================================================
+     LIGHTBOX CONTENT
+     ========================================================= */
+
+.lightbox-content {
+  position: relative;
+
+  width: min(1000px, 85vw);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox-content img {
+  display: block;
+
+  max-width: 100%;
+  max-height: 78vh;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
+  border-radius: 3px;
+
+  box-shadow:
+    0 25px 80px rgba(0, 0, 0, 0.45);
+
+  transform: scale(0.96);
+
+  transition: transform 0.45s ease;
+}
+
+.lightbox.active .lightbox-content img {
+  transform: scale(1);
+}
+
+
+/* =========================================================
+     LIGHTBOX FOOTER
+     ========================================================= */
+
+.lightbox-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  margin-top: 15px;
+
+  color: #eee;
+}
+
+.lightbox-counter {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 14px;
+
+  letter-spacing: 0.15em;
+
+  color: #d8b77f;
+}
+
+.lightbox-caption {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 17px;
+
+  color: #eee;
+}
+
+
+/* =========================================================
+     LIGHTBOX CLOSE BUTTON
+     ========================================================= */
+
+.lightbox-close {
+  position: absolute;
+
+  top: 25px;
+  right: 30px;
+
+  z-index: 2;
+
+  width: 45px;
+  height: 45px;
+
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 30px;
+  font-weight: 200;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.lightbox-close:hover {
+  background: rgba(173, 131, 80, 0.8);
+
+  transform: rotate(90deg);
+}
+
+
+/* =========================================================
+     LIGHTBOX ARROWS
+     ========================================================= */
+
+.lightbox-arrow {
+  position: absolute;
+
+  top: 50%;
+
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 55px;
+  height: 55px;
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+
+  background: rgba(20, 20, 17, 0.25);
+
+  color: white;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 40px;
+  font-weight: 300;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transform: translateY(-50%);
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.lightbox-arrow:hover {
+  background: var(--gold);
+
+  border-color: var(--gold);
+}
+
+.lightbox-prev {
+  left: 30px;
+}
+
+.lightbox-next {
+  right: 30px;
+}
+
+
+/* =========================================================
+     MOBILE GALLERY
+     ========================================================= */
+
+@media (max-width: 800px) {
+
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    margin-top: 35px;
+  }
+
+  .gallery-item {
+    height: 220px;
+  }
+
+  .gallery-item-large {
+    height: 300px;
+
+    grid-row: auto;
+    grid-column: span 2;
+  }
+
+  /*
+       Always show a very subtle overlay on touch devices.
+       There is no hover on most phones.
+    */
+
+  .gallery-overlay {
+    opacity: 1;
+
+    padding: 13px;
+  }
+
+  .gallery-open {
+    width: 32px;
+    height: 32px;
+
+    font-size: 20px;
+
+    background: rgba(20, 20, 17, 0.3);
+
+    transform: scale(1);
+  }
+
+  .gallery-hint {
+    font-size: 14px;
+  }
+
+
+  /* Lightbox */
+
+  .lightbox {
+    padding: 20px;
+  }
+
+  .lightbox-content {
+    width: 100%;
+  }
+
+  .lightbox-content img {
+    max-width: 92vw;
+    max-height: 72vh;
+  }
+
+  .lightbox-arrow {
+    width: 42px;
+    height: 42px;
+
+    font-size: 30px;
+  }
+
+  .lightbox-prev {
+    left: 10px;
+  }
+
+  .lightbox-next {
+    right: 10px;
+  }
+
+  .lightbox-close {
+    top: 15px;
+    right: 15px;
+
+    width: 40px;
+    height: 40px;
+
+    font-size: 26px;
+  }
+
+  .lightbox-footer {
+    padding: 0 5px;
+  }
+}
+
+
+/* =========================================================
+     SMALL MOBILE
+     ========================================================= */
+
+@media (max-width: 450px) {
+
+  .gallery-heading h2 {
+    font-size: 48px;
+  }
+
+  .gallery-intro {
+    padding: 0 10px;
+
+    font-size: 17px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-item {
+    height: 300px;
+  }
+
+  .gallery-item-large {
+    height: 380px;
+
+    grid-column: auto;
+  }
+
+  .gallery-overlay {
+    padding: 15px;
+  }
+
+  .lightbox-content img {
+    max-height: 68vh;
+  }
+
+  .lightbox-arrow {
+    top: auto;
+    bottom: 45px;
+
+    transform: none;
+  }
+
+  .lightbox-prev {
+    left: calc(50% - 55px);
+  }
+
+  .lightbox-next {
+    right: calc(50% - 55px);
+  }
+
+  .lightbox-footer {
+    flex-direction: column;
+    gap: 4px;
+
+    text-align: center;
+  }
+}
+
+
+/* =========================================================
+     REDUCED MOTION
+     ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .gallery-item,
+  .gallery-item img,
+  .gallery-overlay,
+  .gallery-open,
+  .lightbox,
+  .lightbox-content img {
+    transition: none;
+  }
+
+  .gallery-item {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+
+/* =========================================================
+   RSVP SECTION
+   ========================================================= */
+
+.rsvp {
+  text-align: center;
+
+  background: var(--dark);
+  color: #fff;
+}
+
+.rsvp .eyebrow {
+  color: #d8b77f;
+}
+
+.rsvp p {
+  color: #d6d2c9;
+}
+
+.rsvp-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.rsvp .outline {
+  border-color: #aaa;
+  color: #fff;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
+  padding: 50px 20px;
+
+  text-align: center;
+
+  background: #161713;
+  color: #eee;
+}
+
+.footer-monogram {
+  font-family: "Great Vibes", cursive;
+  font-size: 40px;
+  color: #d8b77f;
+}
+
+
+/* =========================================================
+   TABLET / MOBILE
+   Screens smaller than 800px
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  /* Navigation */
+  .nav {
+    padding: 18px 20px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  /* Music button */
+  .music-pill {
+    right: 12px;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 88vh;
+    background-attachment: scroll;
+  }
+
+  /* Sections */
+  section {
+    padding: 70px 20px;
+  }
+
+  h2 {
+    font-size: 48px;
+  }
+
+  /* Event details */
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .details-grid>div {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* Story and location */
+  .story,
+  .location {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  /* Story photos */
+  .photo-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .photo-grid img {
+    height: 280px;
+  }
+
+  .photo-grid img:last-child {
+    display: none;
+  }
+
+  /* Location */
+  .location {
+    padding-top: 60px;
+  }
+
+  .map-card {
+    height: 350px;
+  }
+
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-grid img:first-child {
+    height: 300px;
+
+    grid-row: auto;
+    grid-column: span 2;
+  }
+
+  .gallery-grid img {
+    height: 220px;
+  }
+
+  /* RSVP */
+  .rsvp-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rsvp-actions .button {
+    width: min(280px, 100%);
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   Screens smaller than 450px
+   ========================================================= */
+
+@media (max-width: 450px) {
+
+  .hero h1 {
+    font-size: 58px;
+  }
+
+  .date {
+    font-size: 25px;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-grid img {
+    height: 330px;
+  }
+
+  .photo-grid img:last-child {
+    display: block;
+  }
+}
