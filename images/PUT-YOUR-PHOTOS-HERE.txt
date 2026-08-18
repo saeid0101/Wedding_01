@@ -1,2 +1,0 @@
-Put your own photos in this folder, e.g. couple.jpg, rings.jpg, venue.jpg.
-Then update the image paths in index.html.
