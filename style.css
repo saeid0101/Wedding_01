@@ -1084,6 +1084,51 @@ footer {
   }
 
 
+  /* =========================================================
+   PERSIAN TEXT
+   ========================================================= */
+
+  .persian {
+    margin: 6px 0 0;
+
+    direction: rtl;
+
+    font-family: "Vazirmatn", sans-serif;
+
+    font-size: 14px;
+
+    font-weight: 400;
+
+    line-height: 1.9;
+
+    color: var(--muted);
+  }
+
+
+  /* Persian text inside event details */
+
+  .details-grid .persian {
+    margin-top: 4px;
+  }
+
+
+  /* =========================================================
+   PERSIAN LOCATION
+   ========================================================= */
+
+  .location-persian {
+    direction: rtl;
+
+    font-family: "Vazirmatn", sans-serif;
+
+    font-size: 15px;
+
+    line-height: 2;
+
+    color: var(--muted);
+  }
+
+
   /* -------------------------------------------------------
        STORY
        451–800px → 2 photos
